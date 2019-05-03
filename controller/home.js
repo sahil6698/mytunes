@@ -10,14 +10,14 @@ const getMusic=(req,res,next)=>{
     const fileId=req.query.id;
 
     const filePath=path.join(__dirname, '..','public','music',fileId);
-    res.sendFile(filePath)
-    // if(fs.existsSync(filePath)){
-    //     const rstream=fs.createReadStream(filePath);
-    //     rstream.pipe(res);
-    // }
-    // else{
-    //     res.render('404');
-    // }
+    // res.sendFile(filePath)
+    if(fs.existsSync(filePath)){
+        const rstream=fs.createReadStream(filePath);
+        rstream.pipe(res);
+    }
+    else{
+        res.render('404');
+    }
 };
 const getDownload=(req,res,next)=>{
     const fileId=req.query.id;
