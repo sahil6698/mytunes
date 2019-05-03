@@ -9,10 +9,8 @@ const getHome=(req,res,next)=>{
 const getMusic=(req,res,next)=>{
     const fileId=req.query.id;
 
-    const filePath=path.format({
-        dir:'public/music',
-        base:fileId
-    })
+    const filePath=path.join(__dirname, '..','public','music',fileId);
+    
     if(fs.existsSync(filePath)){
         const rstream=fs.createReadStream(filePath);
         rstream.pipe(res);
@@ -24,10 +22,8 @@ const getMusic=(req,res,next)=>{
 const getDownload=(req,res,next)=>{
     const fileId=req.query.id;
 
-    const filePath=path.format({
-        dir:'public/music',
-        base:fileId
-    })
+    
+    const filePath=path.join(__dirname, '..','public','music',fileId);
     if(fs.existsSync(filePath)){
         res.download(filePath)
     }
