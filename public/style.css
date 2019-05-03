@@ -1,0 +1,38 @@
+body {
+		
+			padding: 30px;
+			background: url('./bg.jpg');
+			text-align: center;
+		
+			
+		}
+		
+		.contents{
+			background: #8bb3d6f2;
+			padding: 40px;
+			margin: auto;
+			
+			text-align: center;
+		
+		}
+		.img{
+		margin-left:6%;
+		}
+		
+		.contents button{
+			width: 100px;
+			opacity: 1;
+			background: #000;
+		}
+		h1 {
+			color: #333333;
+			font-size: 60px;
+		}
+		h2 {
+			color: #2e2e2e;
+			font-size: 28px;
+		}
+		a {
+			color: #2f2f2f;
+			font-size: 18px
+		}
