@@ -3,7 +3,7 @@ const path=require('path');
 
 
 const getHome=(req,res,next)=>{
-        res.render('index');
+        res.render('index.ejs');
 };
 
 const getMusic=(req,res,next)=>{
@@ -16,7 +16,7 @@ const getMusic=(req,res,next)=>{
         rstream.pipe(res);
     }
     else{
-        res.render('404');
+        res.render('404.ejs');
     }
 };
 const getDownload=(req,res,next)=>{
